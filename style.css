@@ -375,3 +375,246 @@ footer{background:#fff;border-top:1px solid var(--line);padding:32px 7%;color:#6
 
 @media(max-width:1000px){.site-hero,.unified-hero{grid-template-columns:1fr}.hero-visual{max-width:620px;width:100%;margin:auto}.unified-hero-art{display:none}.site-hero{padding-top:125px}.unified-hero{min-height:auto;padding-top:125px}.page-doacoes .grid-3{grid-template-columns:1fr}.page-doacoes .doacao-destaque{transform:none}.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.site-hero{min-height:auto;padding:120px 6% 55px}.site-hero h1{letter-spacing:-2px}.hero-visual{min-height:390px}.hero-mini-beneficios{grid-template-columns:1fr}.unified-hero{padding:120px 6% 48px}.unified-hero h1{letter-spacing:-1.6px}.direitos-hero{padding-left:6%;padding-right:6%}.cards,.grid-2,.grid-3,.materiais-grid,.contato-grid{grid-template-columns:1fr!important}.cabecalho{padding-left:5%;padding-right:5%}}
+
+/* =========================================================
+   MOBILE FIRST PATCH — versão 2026-09-08
+   Ajustes para celular sem alterar o visual do desktop.
+   ========================================================= */
+@media (max-width: 700px) {
+  html, body { width:100%; overflow-x:hidden; }
+  body { font-size:16px; line-height:1.6; }
+
+  .cabecalho {
+    min-height:72px;
+    padding:10px 18px;
+  }
+  .logo { gap:9px; font-size:.78rem; line-height:1.05; }
+  .logo-icone { width:39px; height:39px; font-size:19px; }
+  .menu-btn {
+    display:block;
+    width:46px;
+    height:46px;
+    padding:0;
+    border-radius:13px;
+    font-size:1.25rem;
+  }
+  .menu {
+    top:72px;
+    padding:14px 20px 20px;
+    gap:2px;
+    border-top:1px solid var(--line);
+    max-height:calc(100vh - 72px);
+    overflow-y:auto;
+  }
+  .menu a {
+    width:100%;
+    padding:12px 4px;
+    font-size:.95rem;
+    border-bottom:1px solid #f8e8ee;
+  }
+
+  /* Heroes: compactos e legíveis no celular */
+  .site-hero {
+    min-height:auto;
+    padding:106px 20px 42px;
+    display:block;
+  }
+  .site-hero .etiqueta,
+  .unified-hero .etiqueta,
+  .direitos-hero .etiqueta {
+    letter-spacing:1.8px;
+    font-size:.68rem;
+    gap:10px;
+  }
+  .linha-etiqueta { width:38px; }
+  .site-hero h1 {
+    font-size:clamp(3rem,15vw,4.25rem);
+    letter-spacing:-2px;
+    line-height:.92;
+    margin-bottom:20px;
+  }
+  .site-hero h2 {
+    font-size:1.06rem;
+    line-height:1.55;
+  }
+  .site-hero p { font-size:.94rem; line-height:1.7; }
+  .site-hero .botoes { margin-top:24px; }
+  .site-hero .btn { width:100%; text-align:center; }
+  .hero-mini-beneficios {
+    grid-template-columns:1fr;
+    margin-top:28px;
+    gap:10px;
+  }
+  .hero-mini-beneficios > div {
+    background:rgba(255,255,255,.68);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:10px 12px;
+  }
+  .hero-visual { display:none; }
+
+  .unified-hero {
+    min-height:auto;
+    padding:108px 20px 42px;
+    display:block;
+  }
+  .unified-hero h1 {
+    font-size:clamp(2.45rem,12vw,3.45rem);
+    letter-spacing:-1.4px;
+    line-height:1;
+    margin-bottom:15px;
+  }
+  .unified-hero-copy > p:last-child {
+    font-size:.94rem;
+    line-height:1.7;
+  }
+  .unified-hero-art { display:none; }
+
+  .direitos-hero {
+    min-height:auto;
+    padding:108px 20px 44px;
+    display:block;
+  }
+  .direitos-hero h1 {
+    font-size:clamp(2.65rem,13vw,3.7rem);
+    letter-spacing:-1.5px;
+    line-height:.98;
+  }
+  .direitos-hero-texto > p:not(.etiqueta) { font-size:.94rem; }
+  .direitos-hero-texto > .btn { width:100%; text-align:center; }
+  .direitos-beneficios { grid-template-columns:1fr; margin-top:28px; gap:10px; }
+  .direitos-beneficios > div {
+    background:rgba(255,255,255,.72);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:10px 12px;
+  }
+  .direitos-hero-visual { display:none; }
+
+  /* Seções */
+  .secao,
+  .conteudo-pagina,
+  .home-faixa {
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .secao { padding-top:48px; padding-bottom:48px; }
+  .conteudo-pagina { padding-top:40px; padding-bottom:40px; }
+  .home-faixa { padding-top:48px; padding-bottom:48px; }
+
+  .secao h2,
+  .home-faixa h2,
+  .bloco-texto h2,
+  .doacoes h2 {
+    font-size:1.85rem;
+    line-height:1.15;
+  }
+  .texto-central { font-size:.94rem; line-height:1.7; }
+
+  .bloco-texto,
+  .impacto-card,
+  .dado-card,
+  .mito-card,
+  .material-card,
+  .contato-card,
+  .card,
+  .calculadora-ciclo,
+  .painel-grafico {
+    border-radius:19px;
+    box-shadow:0 10px 30px rgba(132,61,86,.07);
+  }
+  .bloco-texto { padding:24px 20px; }
+  .card, .impacto-card, .dado-card, .mito-card, .contato-card { padding:22px 20px; }
+
+  .cards,
+  .grid-2,
+  .grid-3,
+  .contato-grid,
+  .materiais-grid {
+    grid-template-columns:1fr !important;
+    gap:14px;
+  }
+
+  /* Materiais: cards realmente visíveis no celular */
+  .page-materiais .conteudo-pagina { padding-top:30px; }
+  .page-materiais .introducao-materiais { margin-bottom:22px; }
+  .materiais-grid { margin-top:20px; }
+  .material-card,
+  .material-card.destaque-material {
+    grid-column:auto;
+    min-height:0;
+    padding:22px 20px;
+    background:#fff;
+    border:1px solid #f0d4df;
+    box-shadow:0 12px 28px rgba(132,61,86,.08);
+  }
+  .material-tipo {
+    font-size:.72rem;
+    margin-bottom:14px;
+    padding:6px 10px;
+  }
+  .material-card h3 {
+    font-size:1.18rem;
+    line-height:1.32;
+    margin-bottom:9px;
+  }
+  .material-card p {
+    font-size:.91rem;
+    line-height:1.65;
+    margin-bottom:16px;
+  }
+  .material-link {
+    font-size:.9rem;
+    padding-top:2px;
+  }
+  .selo-confiavel { margin-top:18px; }
+
+  .calculadora-ciclo {
+    padding:22px 18px;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .calculadora-ciclo > .btn { width:100%; }
+  .resultado-ciclo { padding:16px; align-items:flex-start; }
+
+  .faq-item { padding:16px 2px; font-size:.93rem; }
+  .faq-resposta p { font-size:.9rem; }
+
+  /* Dados, doações e contato */
+  .home-faixa .conteudo-faixa { grid-template-columns:1fr; gap:22px; }
+  .painel-grafico { padding:22px 18px; }
+  .grafico-cabecalho { display:block; }
+  .grafico-ano { display:inline-block; margin-top:8px; }
+  .grafico-cabecalho strong { font-size:2.65rem; }
+  .barra-topo { gap:10px; font-size:.78rem; }
+
+  .page-doacoes .grid-3 { grid-template-columns:1fr !important; }
+  .page-doacoes .doacao-destaque { transform:none; }
+
+  .cta-rosa,
+  .doacoes {
+    margin:22px 20px 46px;
+    padding:28px 20px;
+    border-radius:20px;
+    align-items:stretch;
+  }
+  .cta-rosa .btn,
+  .doacoes .btn { width:100%; text-align:center; }
+
+  .contato-grid { margin-top:24px; }
+  .contato-card { text-align:left; }
+  .contato-card i { margin-bottom:10px; }
+
+  .botoes { gap:10px; }
+  .botoes .btn { flex:1 1 100%; text-align:center; }
+  .btn { padding:13px 18px; }
+
+  footer { padding:24px 20px; font-size:.82rem; }
+}
+
+@media (max-width: 380px) {
+  .site-hero h1 { font-size:2.8rem; }
+  .unified-hero h1 { font-size:2.35rem; }
+  .logo { font-size:.72rem; }
+  .logo-icone { width:36px; height:36px; }
+}
