@@ -732,3 +732,89 @@ body {
     background: #fff7fa !important;
   }
 }
+
+/* ===== MOBILE: manter as abas visíveis no topo ===== */
+@media (max-width: 820px) {
+  .novo-cabecalho {
+    padding: 12px 0 0 !important;
+  }
+
+  .cabecalho-institucional {
+    padding: 0 16px 10px;
+    margin: 0 !important;
+  }
+
+  .novo-cabecalho .menu-btn {
+    display: none !important;
+  }
+
+  .marca-projeto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .menu-ilustrado,
+  .menu-ilustrado.aberto,
+  .menu-ilustrado.open,
+  .menu-ilustrado.ativo-menu,
+  .menu-ilustrado.ativo {
+    display: flex !important;
+    position: static !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 7px 10px 8px !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu-ilustrado::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-ilustrado a {
+    flex: 0 0 auto !important;
+    min-width: max-content !important;
+    padding: 9px 12px !important;
+    border-radius: 14px !important;
+    font-size: .76rem !important;
+    gap: 6px !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+  }
+
+  .menu-ilustrado a i {
+    font-size: .95rem !important;
+  }
+
+  .menu-ilustrado a.ativo:after {
+    display: block !important;
+    left: 18% !important;
+    right: 18% !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .ifpr-topo img {
+    width: 102px !important;
+  }
+
+  .marca-projeto strong {
+    font-size: 1.05rem !important;
+    line-height: 1.05 !important;
+  }
+
+  .menu-ilustrado a {
+    padding: 8px 10px !important;
+    font-size: .72rem !important;
+  }
+}
